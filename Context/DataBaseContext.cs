@@ -10,21 +10,15 @@ namespace App.EFCore.Test.Context
     {
         public DataBaseContext() { }
 
-        /// <summary>
-        /// Relacionamento 1:1
-        /// </summary>
+        // Relacionamento 1:1
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<PessoaEndereco> PessoaEnderecos { get; set; }
 
-        /// <summary>
-        /// Relacionamento 1:N
-        /// </summary>
+        // Relacionamento 1:N
         public DbSet<Curso> Cursos { get; set; }
         public DbSet<Aluno> Alunos { get; set; }
 
-        /// <summary>
-        /// Relacionamento N:N
-        /// </summary>
+        // Relacionamento N:N
         public DbSet<Autor> Autores { get; set; }
         public DbSet<Livro> Livros { get; set; }
         public DbSet<LivroAutor> LivrosAutores { get; set; }
