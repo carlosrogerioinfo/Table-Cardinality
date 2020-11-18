@@ -25,9 +25,9 @@ namespace App.EFCore.Test.Mapping
                 .HasConversion(x => (char)x, x => (TipoPessoa)x);
 
             builder
-                .HasOne<EnderecoPessoa>(ep => ep.EnderecoPessoa)
+                .HasOne<PessoaEndereco>(ep => ep.PessoaEndereco)
                 .WithOne(p => p.Pessoa)
-                .HasForeignKey<EnderecoPessoa>(ep => ep.PessoaId);
+                .HasForeignKey<PessoaEndereco>(ep => ep.PessoaId);
         }
 
     }

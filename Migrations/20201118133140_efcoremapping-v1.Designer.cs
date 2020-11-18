@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace App.EFCore.Test.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20201118114211_relationship-v2")]
-    partial class relationshipv2
+    [Migration("20201118133140_efcoremapping-v1")]
+    partial class efcoremappingv1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -121,7 +121,27 @@ namespace App.EFCore.Test.Migrations
                     b.ToTable("efcore_curso");
                 });
 
-            modelBuilder.Entity("App.EFCore.Test.Models.OneToOne.EnderecoPessoa", b =>
+            modelBuilder.Entity("App.EFCore.Test.Models.OneToOne.Pessoa", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<char>("TipoPessoa")
+                        .HasColumnType("nvarchar(1)")
+                        .HasColumnName("TipoPessoa");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("efcore_pessoa");
+                });
+
+            modelBuilder.Entity("App.EFCore.Test.Models.OneToOne.PessoaEndereco", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -141,26 +161,6 @@ namespace App.EFCore.Test.Migrations
                         .IsUnique();
 
                     b.ToTable("efcore_pessoa_endereco");
-                });
-
-            modelBuilder.Entity("App.EFCore.Test.Models.OneToOne.Pessoa", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<char>("TipoPessoa")
-                        .HasColumnType("nvarchar(1)")
-                        .HasColumnName("TipoPessoa");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("efcore_pessoa");
                 });
 
             modelBuilder.Entity("App.EFCore.Test.Models.ManyToMany.LivroAutor", b =>
@@ -193,11 +193,11 @@ namespace App.EFCore.Test.Migrations
                     b.Navigation("Curso");
                 });
 
-            modelBuilder.Entity("App.EFCore.Test.Models.OneToOne.EnderecoPessoa", b =>
+            modelBuilder.Entity("App.EFCore.Test.Models.OneToOne.PessoaEndereco", b =>
                 {
                     b.HasOne("App.EFCore.Test.Models.OneToOne.Pessoa", "Pessoa")
-                        .WithOne("EnderecoPessoa")
-                        .HasForeignKey("App.EFCore.Test.Models.OneToOne.EnderecoPessoa", "PessoaId")
+                        .WithOne("PessoaEndereco")
+                        .HasForeignKey("App.EFCore.Test.Models.OneToOne.PessoaEndereco", "PessoaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -221,7 +221,7 @@ namespace App.EFCore.Test.Migrations
 
             modelBuilder.Entity("App.EFCore.Test.Models.OneToOne.Pessoa", b =>
                 {
-                    b.Navigation("EnderecoPessoa");
+                    b.Navigation("PessoaEndereco");
                 });
 #pragma warning restore 612, 618
         }

@@ -13,7 +13,7 @@ namespace App.EFCore.Test.Models.OneToOne
 
         public string Nome { get; set; }
         public TipoPessoa TipoPessoa { get; set; }
-        public EnderecoPessoa EnderecoPessoa { get; set; }
+        public PessoaEndereco PessoaEndereco { get; set; }
 
     }
 }

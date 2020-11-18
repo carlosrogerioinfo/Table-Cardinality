@@ -14,7 +14,7 @@ namespace App.EFCore.Test.Context
         /// Relacionamento 1:1
         /// </summary>
         public DbSet<Pessoa> Pessoas { get; set; }
-        public DbSet<EnderecoPessoa> EnderecoPessoas { get; set; }
+        public DbSet<PessoaEndereco> PessoaEnderecos { get; set; }
 
         /// <summary>
         /// Relacionamento 1:N
@@ -35,7 +35,7 @@ namespace App.EFCore.Test.Context
 
             //1:1
             modelBuilder.ApplyConfiguration(new PessoaMap());
-            modelBuilder.ApplyConfiguration(new EnderecoPessoaMap());
+            modelBuilder.ApplyConfiguration(new PessoaEnderecoMap());
 
             //1:N
             modelBuilder.ApplyConfiguration(new CursoMap());

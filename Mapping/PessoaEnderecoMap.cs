@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace App.EFCore.Test.Mapping
 {
-    public class EnderecoPessoaMap: IEntityTypeConfiguration<EnderecoPessoa>
+    public class PessoaEnderecoMap: IEntityTypeConfiguration<PessoaEndereco>
     {
-        public void Configure(EntityTypeBuilder<EnderecoPessoa> builder)
+        public void Configure(EntityTypeBuilder<PessoaEndereco> builder)
         {
             builder.HasKey(x => x.Id);
 
@@ -20,8 +20,8 @@ namespace App.EFCore.Test.Mapping
 
             builder
                 .HasOne<Pessoa>(p => p.Pessoa)
-                .WithOne(ep => ep.EnderecoPessoa)
-                .HasForeignKey<EnderecoPessoa>(ep => ep.PessoaId);
+                .WithOne(ep => ep.PessoaEndereco)
+                .HasForeignKey<PessoaEndereco>(ep => ep.PessoaId);
         }
 
     }

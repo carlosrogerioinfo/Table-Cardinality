@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace App.EFCore.Test.Models.OneToOne
 {
     [Table("efcore_pessoa_endereco")]
-    public class EnderecoPessoa: Entity
+    public class PessoaEndereco: Entity
     {
-        public EnderecoPessoa()
+        public PessoaEndereco()
         {
 
         }

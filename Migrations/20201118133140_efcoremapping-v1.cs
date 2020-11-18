@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace App.EFCore.Test.Migrations
 {
-    public partial class relationshipv2 : Migration
+    public partial class efcoremappingv1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
