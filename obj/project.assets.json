@@ -5782,11 +5782,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DEVELOPMENT\\WEB\\Aspnet\\Full\\InVivoPlataform\\App.EFCore.Test\\App.EFCore.Test.csproj",
+      "projectUniqueName": "C:\\Users\\Carlos Rogerio\\source\\repos\\Table-Cardinality\\App.EFCore.Test.csproj",
       "projectName": "App.EFCore.Test",
-      "projectPath": "C:\\DEVELOPMENT\\WEB\\Aspnet\\Full\\InVivoPlataform\\App.EFCore.Test\\App.EFCore.Test.csproj",
+      "projectPath": "C:\\Users\\Carlos Rogerio\\source\\repos\\Table-Cardinality\\App.EFCore.Test.csproj",
       "packagesPath": "C:\\Users\\Carlos Rogerio\\.nuget\\packages\\",
-      "outputPath": "C:\\DEVELOPMENT\\WEB\\Aspnet\\Full\\InVivoPlataform\\App.EFCore.Test\\obj\\",
+      "outputPath": "C:\\Users\\Carlos Rogerio\\source\\repos\\Table-Cardinality\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6gHdZtn5D2+KL/ao0Co+RosEGUqlIXNrVRn8PcKCEUGYeulmHEwI8ygBvtDYxj2LCUUOzG4hqmrXKKrKOmI9ng==",
+  "dgSpecHash": "8mzmdQR/sG/ExyJK0EHdVNrmEwypN7RQ9NB/iKosSm6XS6on/ak34OJM+xxw8cMjBnA2ViMuiDTzoqbFH01l/w==",
   "success": true,
-  "projectFilePath": "C:\\DEVELOPMENT\\WEB\\Aspnet\\Full\\InVivoPlataform\\App.EFCore.Test\\App.EFCore.Test.csproj",
+  "projectFilePath": "C:\\Users\\Carlos Rogerio\\source\\repos\\Table-Cardinality\\App.EFCore.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Carlos Rogerio\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Carlos Rogerio\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
